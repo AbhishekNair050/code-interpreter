@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Interpreter</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+  <div class="container mx-auto p-8 bg-white rounded-lg shadow-lg">
+    <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">Code Interpreter</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <div class="mb-4">
+          <button id="selectFileButton" class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Select File</button>
+        </div>
+        <div class="mb-4">
+          <textarea id="file-content" readonly class="w-full h-40 p-2 border rounded resize-none bg-gray-100"></textarea>
+        </div>
+        <div class="mb-4">
+          <input type="text" id="prompt" placeholder="Enter prompt here" class="w-full p-2 border rounded" />
+        </div>
+        <div class="mb-4">
+          <button id="execute-code" class="w-full bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded">Execute Code</button>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold mb-2 text-gray-800">Output</h2>
+          <div id="output" class="bg-gray-100 p-4 border rounded min-h-[100px]"></div>
+        </div>
+      </div>
+      <div>
+        <h2 class="text-2xl font-bold mb-2 text-gray-800">Generated Code</h2>
+        <pre id="generated-code" class="language-python bg-gray-100 p-4 border rounded h-96 overflow-auto"><code></code></pre>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

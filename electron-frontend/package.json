@@ -1,0 +1,25 @@
+{
+  "name": "code-interpreter",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "axios": "^1.7.2",
+    "electron": "^13.1.7",
+    "electron-builder": "^22.14.13"
+  },
+  "build": {
+    "appId": "com.example.codeinterpreter",
+    "files": [
+      "src/**/*",
+      "dist/**/*",
+      "!node_modules/**/*"
+    ],
+    "directories": {
+      "output": "build"
+    }
+  }
+}
