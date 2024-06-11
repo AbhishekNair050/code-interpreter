@@ -1,0 +1,7 @@
+PyPDF2
+pandas
+openpyxl
+python-docx
+langchain-google-genai
+Flask==2.0.1
+flask-cors==3.0.10
